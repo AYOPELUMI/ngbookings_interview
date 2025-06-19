@@ -70,7 +70,6 @@ export default function RegisterPage() {
                             Create Your Account
                         </h1>
                         <h2 className="text-black text-center">
-
                             Don't miss out on unbeatable hotel deals, secret offers, and personalized travel tips! Sign up now and make your next trip unforgettable.
                         </h2>
                     </div>
