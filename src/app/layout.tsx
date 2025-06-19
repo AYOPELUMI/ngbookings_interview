@@ -1,20 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import { ThemeProvider } from 'next-themes'
 import "./globals.css";
 import QueryProvider from "@/providers/queryClient";
 import Header from "@/components/ui/sections/header";
 import Footer from "@/components/ui/sections/footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"]
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -30,7 +28,7 @@ export default function RootLayout({
     <html lang="en">
 
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-cover bg-center bg-no-repeat bg-fixed`}
+        className={`${poppins.variable}  antialiased bg-cover bg-center bg-no-repeat bg-fixed`}
         style={{
           backgroundImage: "url('/images/OnboardingBG.webp')",
         }}

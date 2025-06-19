@@ -12,9 +12,9 @@ const Footer = () => {
                 <div className="flex flex-col gap-6 items-start pb-5 w-fit min-w-48 lg:min-w-56">
                     <img src="/images/logo.png" alt="Ngbookings.com" className=" w-48 object-cover cursor-pointer" />
                     <div className=" flex gap-5 items-center">
-                        {socials.map((social) => (
+                        {socials.map((social, index) => (
                             <Link href={social.link} key={social.link} target="_blank" rel="noopener noreferrer" className=" cursor-pointer">
-                                <img src={social.image} alt="Facebook icon" className=" w-3" />
+                                <img src={social.image} alt="Facebook icon" className={`${index == 0 ? "w-3" : " w-5"}`} />
                             </Link>
                         ))}
                     </div>

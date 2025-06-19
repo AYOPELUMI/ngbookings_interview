@@ -11,11 +11,8 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { cn } from '@/lib/utils'
 import ImageSlide from '@/components/ui/sections/imageSlide'
 import AuthHeader from '@/components/ui/sections/authHeader'
-import SocialButtons from '@/components/ui/sections/socialButtons'
 import FormFieldInput from '@/components/ui/form fields/formFieldInput'
 import { Mail } from 'lucide-react'
-import Link from 'next/link'
-import AnimatedLink from '@/components/animatedLink'
 const formSchema = z.object({
     email: z.string().email('Invalid email'),
     password: z.string().min(6, 'Password must be at least 6 characters')
@@ -29,7 +26,7 @@ export default function LoginPage() {
         resolver: zodResolver(formSchema),
         defaultValues: {
             email: '',
-            password: ''
+
         }
     })
 
@@ -39,19 +36,18 @@ export default function LoginPage() {
 
     return (
         <div className="w-full h-full pt-5 max-sm:pt-3 px-8 max-sm:px-5 pb-14 max-sm:pb-8">
-            <AuthHeader name="Register" link="/register" />
+            <AuthHeader name="Sign in" link="/login" />
             <div className=" flex gap-10 max-sm:gap-0 w-full">
                 <ImageSlide />
                 <div className=" w-full">
                     <div className=" flex flex-col gap-2">
-                        <h1 className=" font-bold text-4xl max-md:text-3xl max-sm:text-3xl text-primary text-center">Welcome Back, Traveler!</h1>
+                        <h1 className=" font-bold text-4xl max-md:text-3xl max-sm:text-3xl text-primary text-center">Forgot Password</h1>
                         <h2 className="text-black text-center">
-                            "Your next adventure is just a click away. Log in to manage your bookings, access exclusive offers, and unlock the best deals on hotels, flights, and more!"
+                            Can’t Access Your Account? Let’s Get You Back In!
                         </h2>
                     </div>
+                    <p className=" my-3 text-black text-center text-sm">Enter your email below, and we’ll send you a link to reset your password.</p>
                     <div className=" flex flex-col items-center w-full mt-10">
-                        <SocialButtons />
-
                         <Form {...form}>
                             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 w-full max-sm:space-y-4 max-[730px]:w-[90%] max-sm:w-full lg:w-[80%]">
                                 <FormFieldInput
@@ -60,23 +56,15 @@ export default function LoginPage() {
                                     icon={<Mail />}
                                     label="Email"
                                 />
-                                <div className=''>
-                                    <FormFieldInput
-                                        form={form}
-                                        name="password"
-                                        label="Password"
-                                        type="password"
-                                        placeholder="••••••••"
-                                    />
-                                    <div className='flex justify-end'>
-                                        <AnimatedLink title={'Forgot Password?'} href={'/forgot-password'} />
-                                    </div>
-                                </div>
+
                                 <Button type="submit" className="w-full" disabled={isPending}>
-                                    {isPending ? 'Logging in...' : 'Login'}
+                                    {isPending ? 'Submitting...' : 'Submit'}
                                 </Button>
                             </form>
                         </Form>
+                        <p className=" mt-8 text-black text-center text-sm w-[90%]">
+                            "If an account with the provided email exists, you will receive an email with instructions to reset your password shortly."
+                        </p>
                     </div>
                 </div>
             </div>
