@@ -6,11 +6,9 @@
 
 ### 2. Authentication Page
 
-- Navigate to a authenticatoin page depending on the action carried out.
-
-  - Login Page
-  - Sign up page
-  - Forgot password page
+- Login Page
+- Sign up page
+- Forgot password page
 
 ### 3. Responsive Design
 
@@ -45,8 +43,7 @@ cd ngbookings_interview
 
 To access the TMDb API:
 
-1. Register for a free TMDb API key by visiting [TMDb's API page](https://developer.themoviedb.org/reference/intro/getting-started).
-2. Add the API key to the project:
+1. Add the API key to the project:
    - Create a `.env` file in the project root.
    - Add the following environment variable:
      `plaintext
