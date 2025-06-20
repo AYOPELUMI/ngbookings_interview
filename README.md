@@ -69,7 +69,7 @@ To go the login page:
 
 - [http://localhost:5173/login](http://localhost:5173/login)
 
-## Sign uU Page
+## Sign Up Page
 
 To go the sign Up page:
 
