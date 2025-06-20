@@ -121,6 +121,10 @@
   }
 }
 
+body {
+  font-family: var(--font-poppins);
+}
+
 @keyframes fadeInTop {
   0% {
     opacity: 0;
