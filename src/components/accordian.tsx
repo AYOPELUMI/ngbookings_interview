@@ -33,9 +33,9 @@ function AccordionItem({ title, links }: AccordionItem) {
                 <span className="font-semibold text-lg">{title}</span>
                 <span className="ml-2 transform transition-transform duration-200 text-sm">
                     {isOpen ? (
-                        <span className="text-gray-600">−</span> // Minus sign
+                        <span className="text-gray-600 text-lg">−</span> // Minus sign
                     ) : (
-                        <span className="text-gray-600">+</span> // Plus sign
+                        <span className="text-gray-600 text-lg">+</span> // Plus sign
                     )}
                 </span>
             </button>

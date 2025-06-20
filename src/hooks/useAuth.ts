@@ -17,6 +17,8 @@ export const useLogin = () => {
 
             toast.success("Login successful")
             router.push('/')
+            toast.success("Login successful")
+            router.push('/')
         },
         onError: (error: AxiosError) => {
             console.log({ error })
@@ -25,7 +27,7 @@ export const useLogin = () => {
     })
 }
 
-export const  useRegister = () => {
+export const useRegister = () => {
     const router = useRouter()
     const setAuth = useAuthStore((state) => state.setAuth)
 
