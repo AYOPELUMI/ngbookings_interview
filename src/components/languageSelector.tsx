@@ -8,7 +8,8 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import Image from 'next/image'
-import { ChevronDown } from 'lucide-react' // Import the icon
+import { ChevronDown } from 'lucide-react'
+import { cn } from '@/lib/utils' // Assuming you have a cn utility for class merging
 
 type Language = {
     code: string
@@ -23,12 +24,20 @@ const languages: Language[] = [
     { code: 'ZH', name: '中文', flag: '/svgs/china.svg' },
 ]
 
-const LanguageSelector = () => {
+interface LanguageSelectorProps {
+    className?: string,
+    isAuth?: boolean
+}
+
+const LanguageSelector = ({ className, isAuth = false }: LanguageSelectorProps) => {
     const [selectedLanguage, setSelectedLanguage] = useState<Language>(languages[0])
 
     return (
         <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+            <DropdownMenuTrigger className={cn(
+                "flex items-center gap-2 px-3 py-2 rounded-md  dark:hover:bg-gray-800 transition-colors cursor-pointer",
+                className
+            )}>
                 <Image
                     src={selectedLanguage.flag}
                     alt={selectedLanguage.name}
@@ -36,9 +45,12 @@ const LanguageSelector = () => {
                     height={15}
                     className="w-5 h-auto rounded-md"
                 />
-                <ChevronDown className="h-4 w-4 opacity-50" /> {/* Added dropdown icon */}
+                {isAuth ?
+                    <span>{selectedLanguage.code.toUpperCase()} </span> : null
+                }
+                <ChevronDown className="h-4 w-4 opacity-50" />
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-36"> {/* Slightly wider */}
+            <DropdownMenuContent align="end" className="w-36">
                 {languages.map((language) => (
                     <DropdownMenuItem
                         key={language.code}
@@ -52,10 +64,8 @@ const LanguageSelector = () => {
                             height={15}
                             className="w-5 h-auto"
                         />
-
-                        <span className="">{language.code.toUpperCase()} - </span>
-                        <span className="">{language.name}</span>
-
+                        <span>{language.code.toUpperCase()} - </span>
+                        <span>{language.name}</span>
                     </DropdownMenuItem>
                 ))}
             </DropdownMenuContent>

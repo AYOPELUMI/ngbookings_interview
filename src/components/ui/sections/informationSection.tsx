@@ -10,7 +10,7 @@ const InformationSection = () => {
                 <div className=" text-white flex flex-col gap-8 max-md:gap-5 w-full">
                     <p className=" text-3xl max-md:text-2xl font-medium  max-md:text-center">Competitive Pricing</p>
                     <p className=" text-lg max-md:text-center">
-                        "With 500+ suppliers and the purchasing power of 300 million members, Ghbookings.ng can save you more!"
+                        With 500+ suppliers and the purchasing power of 300 million members, Ghbookings.ng can save you more!
                     </p>
                 </div>
                 <div className=" md:w-full">

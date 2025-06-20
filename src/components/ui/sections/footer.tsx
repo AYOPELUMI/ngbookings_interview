@@ -1,3 +1,4 @@
+import Accordion from '@/components/accordian'
 import { footerLinks, socials } from '@/lib/constants'
 import Link from 'next/link'
 import React from 'react'
@@ -44,11 +45,14 @@ const Footer = () => {
                         </div>
                     ))}
                 </div>
+                <div className='md:hidden'>
+                    <Accordion items={footerLinks} />
+                </div>
             </div>
             <div className=" text-gray-800 text-center text-sm">
-                "Copyrights. All rights reserved "
-                "2025"
-                " Ngbookings.com Limited"
+                Copyrights. All rights reserved
+                2025
+                Ngbookings.com Limited
             </div>
         </div>
     )

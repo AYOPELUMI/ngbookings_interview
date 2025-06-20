@@ -97,7 +97,7 @@ const TopOffers = ({ title, subtitle }: { title: string, subtitle: string }) => 
                 <div className=" text-lg max-sm:text-base text-center">{subtitle}</div>
             </div>
             <div className="featured-hotel w-full">
-                <SlideShow items={hotels} renderItem={(hotel) => <HotelCard image={hotel.image} location={hotel.location} ratings={hotel.ratings} name={hotel.name} features={hotel.features} amount={hotel.amount} />} />
+                <SlideShow items={hotels} renderItem={(hotel) => <HotelCard key={hotel.name} image={hotel.image} location={hotel.location} ratings={hotel.ratings} name={hotel.name} features={hotel.features} amount={hotel.amount} />} />
             </div>
         </div>
 

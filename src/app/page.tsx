@@ -1,11 +1,13 @@
+"use client"
 import FindyByBrands from "@/components/findyByBrands";
 import DestinationSection from "@/components/ui/sections/destinationSection";
 import FindBySection from "@/components/ui/sections/findBySection";
 import HeroSection from "@/components/ui/sections/heroSection";
 import InformationSection from "@/components/ui/sections/informationSection";
-import SlideShow from "@/components/ui/sections/slideShow";
+import ListPropertySection from "@/components/ui/sections/listPropertySection";
+import NewsLetterSection from "@/components/ui/sections/newsLetterSection";
+import TestimonialSection from "@/components/ui/sections/testimonialSection";
 import TopHotelOffers from "@/components/ui/sections/topOffers";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -18,6 +20,9 @@ export default function Home() {
       <FindBySection />
       <FindyByBrands />
       <InformationSection />
+      <TestimonialSection />
+      <ListPropertySection />
+      <NewsLetterSection />
     </div>
   );
 }

@@ -1,14 +1,15 @@
 import React, { useState } from 'react'
-import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from '../form'
+import { FormField, FormItem, FormControl, FormDescription, FormMessage } from '../form'
 import { Input } from '../input'
 import { Eye, EyeOff } from 'lucide-react'
+import { UseFormReturn } from 'react-hook-form'
 
 type FormFieldInputProps = {
     type?: React.HTMLInputTypeAttribute
     name: string
     label: string
     placeholder?: string
-    form: any
+    form: UseFormReturn<any>
     description?: string
     icon?: React.ReactNode
 }
@@ -16,7 +17,6 @@ type FormFieldInputProps = {
 const FormFieldInput = ({
     name,
     label,
-    placeholder,
     form,
     description,
     type = "text",

@@ -1,3 +1,4 @@
+import LanguageSelector from '@/components/languageSelector'
 import React from 'react'
 
 const Header = () => {
@@ -11,6 +12,7 @@ const Header = () => {
                     <img src="/svgs/Logo2.svg" alt="Ngbookings Logo" className=" h-full w-full" />
                 </div>
             </div>
+            <LanguageSelector isAuth={true} className='border-2 border-white text-white rounded-[24px] px-3 py-1 !hover:bg-primary/70' />
         </div>
     )
 }

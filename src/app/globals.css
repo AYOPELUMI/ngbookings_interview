@@ -135,3 +135,25 @@
 .animate-fade-in-top {
   animation: fadeInTop 0.5s ease forwards;
 }
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.custom-swiper-pagination {
+  background: rgba(0, 0, 0, 0.1);
+  height: 2px;
+  position: relative;
+  width: 100%;
+}
+.custom-swiper-pagination .swiper-pagination-progressbar-fill {
+  background: var(--color-primary);
+  height: 100%;
+  display: block;
+}

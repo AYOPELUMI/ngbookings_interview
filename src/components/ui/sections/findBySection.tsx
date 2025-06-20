@@ -44,7 +44,7 @@ const FindBySection = () => {
         <div className="px-10 max-sm:px-5 pt-12 max-sm:pt-8 flex flex-col gap-5">
             <div className=" font-bold text-3xl max-sm:text-2xl max-sm:text-center  text-primary">Find by Categories</div>
             <div className=" flex flex-wrap items-center justify-center gap-x-5 gap-y-10">
-                {hotels.map((hotel) => <DisplayCard image={hotel.image} title={hotel.name} />)}
+                {hotels.map((hotel) => <DisplayCard key={hotel.name} image={hotel.image} title={hotel.name} />)}
             </div>
         </div>
     )

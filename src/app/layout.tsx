@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
 import { ThemeProvider } from 'next-themes'
 import "./globals.css";
 import QueryProvider from "@/providers/queryClient";
-import Header from "@/components/ui/sections/header";
 import Footer from "@/components/ui/sections/footer";
+import { Toaster } from "sonner";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -25,17 +25,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-
-      <body
-        className={`${poppins.variable}  antialiased bg-cover bg-center bg-no-repeat bg-fixed`}
-        style={{
-          backgroundImage: "url('/images/OnboardingBG.webp')",
-        }}
-      >
-        <ThemeProvider>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${poppins.variable} antialiased bg-cover bg-center bg-no-repeat bg-fixed`}>
+        <ThemeProvider defaultTheme="light">
           <QueryProvider>
-            <Header />
+            <Toaster visibleToasts={4} position="top-center" />
             {children}
             <Footer />
           </QueryProvider>

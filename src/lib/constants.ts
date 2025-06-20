@@ -1,3 +1,5 @@
+import { Bed, Building2, PlaneTakeoff, CarTaxiFront } from "lucide-react"
+
 export const socials = [
     {
         link: "https://web.facebook.com/ngbookingsdotcom/",
@@ -155,4 +157,28 @@ export const footerLinks = [
 
         ]
     },
+]
+
+
+export const tabs = [
+    {
+        id: 'hotels',
+        title: "Hotels",
+        icon: Bed,
+    },
+    {
+        id: 'apartments',
+        title: "Apartments",
+        icon: Building2,
+    },
+    {
+        id: 'flights',
+        title: "Flights",
+        icon: PlaneTakeoff,
+    },
+    {
+        id: 'rides',
+        title: "Rides",
+        icon: CarTaxiFront,
+    }
 ]

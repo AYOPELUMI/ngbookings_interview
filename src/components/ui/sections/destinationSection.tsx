@@ -1,5 +1,6 @@
 import DestinationDisplayyCard from '@/components/cards/destinationDisplayyCard'
 import React from 'react'
+import SlideShow from './slideShow'
 
 const hotels = [
     {
@@ -47,15 +48,20 @@ const DestinationSection = () => {
     return (
         <div className="px-10 max-sm:px-5 pt-20 max-md:pt-40 flex flex-col gap-5">
             <div>
-                <div className=" font-bold text-3xl max-sm:text-2xl max-sm:text-center  text-purple pb-2">Top Destinations</div>
+                <div className=" font-bold text-3xl max-sm:text-2xl max-sm:text-center  text-primaryerosectio pb-2">Top Destinations</div>
                 <div className=" text-lg max-sm:text-base  max-sm:text-center">Amazing places to explore in Nigeria</div>
             </div>
-            <div className="top-destination-slider">
-                <div className=" flex gap-5 flex-wrap justify-center">
+            <div className="">
+                <div className="hidden lg:flex gap-5 flex-wrap justify-center">
                     {hotels.map((hotel) => (
                         <DestinationDisplayyCard key={hotel.name} location={hotel.name} quantity={hotel.quantity} image={hotel.image} />
                     ))}
                 </div>
+
+                <div className="lg:hidden">
+                    <SlideShow items={hotels} renderItem={(hotel) => <DestinationDisplayyCard key={hotel.name} location={hotel.name} quantity={hotel.quantity} image={hotel.image} isHotel={false} />} />
+                </div>
+
             </div>
         </div>
     )
