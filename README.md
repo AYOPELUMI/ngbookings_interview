@@ -1,8 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Features Implemented
+
+### 1. Homepage
+
+- Cloned 80% of the homepage with dummy data
+
+### 2. Authentication Page
+
+- Navigate to a authenticatoin page depending on the action carried out.
+
+  - Login Page
+  - Sign up page
+  - Forgot password page
+
+### 3. Responsive Design
+
+- Optimized layouts for mobile, tablet, and desktop screens using Tailwind CSS.
+
+### 4. TypeScript
+
+- Type safety enforced throughout the application.
+- Defined types/interfaces for API responses and components.
+
+---
+
+## Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/) (for routing and data fetching)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) (for responsive and modern styling)
+- **Type Safety**: [TypeScript](https://www.typescriptlang.org/) (for strong typing)
+- **API**: [TMDb API](https://developer.themoviedb.org/reference/intro/getting-started)
+- **Zustand**: [Zustand](https://zustand.docs.pmnd.rs/getting-started/introduction)
+- **Shadcn**: [Shadcn](https://ui.shadcn.com/)
 
 ## Getting Started
 
-First, run the development server:
+Clone the repository:
+
+```bash
+git clone https://github.com/AYOPELUMI/ngbookings_interview.git
+cd ngbookings_interview
+```
+
+### Setting Up API Access
+
+To access the TMDb API:
+
+1. Register for a free TMDb API key by visiting [TMDb's API page](https://developer.themoviedb.org/reference/intro/getting-started).
+2. Add the API key to the project:
+   - Create a `.env` file in the project root.
+   - Add the following environment variable:
+     `plaintext
+NEXT_PUBLIC_API_URL=base_url
+`
+     First, run the development server:
 
 ```bash
 npm run dev
@@ -14,23 +64,22 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:5173](http://localhost:5173) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Login Page
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To go the login page:
 
-## Learn More
+- [http://localhost:5173/login](http://localhost:5173/login)
 
-To learn more about Next.js, take a look at the following resources:
+## Sign uU Page
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To go the sign Up page:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [http://localhost:5173/sign-up](http://localhost:5173/sign-up)
 
-## Deploy on Vercel
+## Forgot Password Page
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To go the forgot password pages:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [http://localhost:5173/forgot-password](http://localhost:5173/forgot-password)
