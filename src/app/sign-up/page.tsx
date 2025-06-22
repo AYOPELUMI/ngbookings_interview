@@ -132,7 +132,7 @@ export default function RegisterPage() {
                                         placeholder="••••••••"
                                     />
 
-                                    <Button type="submit" className="w-full" disabled={isPending}>
+                                    <Button type="submit" variant={"secondary"} className="w-full" disabled={isPending}>
                                         {isPending ? 'Creating Account...' : 'Create Account'}
                                     </Button>
                                 </form>

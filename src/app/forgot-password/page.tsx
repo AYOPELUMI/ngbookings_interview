@@ -57,7 +57,7 @@ export default function ForgotPasswordPage() {
                                         label="Email"
                                     />
 
-                                    <Button type="submit" className="w-full" disabled={isPending}>
+                                    <Button type="submit" variant={"secondary"} className="w-full" disabled={isPending}>
                                         {isPending ? 'Submitting...' : 'Submit'}
                                     </Button>
                                 </form>

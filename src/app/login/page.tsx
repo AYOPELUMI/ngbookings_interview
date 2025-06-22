@@ -72,7 +72,7 @@ export default function LoginPage() {
                                             <AnimatedLink title={'Forgot Password?'} href={'/forgot-password'} />
                                         </div>
                                     </div>
-                                    <Button type="submit" className="w-full" disabled={isPending}>
+                                    <Button type="submit" variant={"secondary"} className="w-full !hover:bg-primary/75" disabled={isPending}>
                                         {isPending ? 'Logging in...' : 'Login'}
                                     </Button>
                                 </form>
