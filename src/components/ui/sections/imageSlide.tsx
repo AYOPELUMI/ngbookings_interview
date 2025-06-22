@@ -7,14 +7,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules"; // Import Autoplay module
 
 const images = [
-    { image: "/images/swiper1.webp" },
-    { image: "/images/swiper2.webp" },
-    { image: "/images/swiper3.webp" },
-    { image: "/images/swiper4.webp" },
-    { image: "/images/swiper5.webp" },
-    { image: "/images/swiper6.webp" },
-    { image: "/images/swiper7.webp" },
-    { image: "/images/swiper8.webp" }
+    { image: "/images/Swiper1.webp" },
+    { image: "/images/Swiper2.webp" },
+    { image: "/images/Swiper3.webp" },
+    { image: "/images/Swiper4.webp" },
+    { image: "/images/Swiper5.webp" },
+    { image: "/images/Swiper6.webp" },
+    { image: "/images/Swiper7.webp" },
+    { image: "/images/Swiper8.webp" }
 ]
 
 const ImageSlide = () => {
