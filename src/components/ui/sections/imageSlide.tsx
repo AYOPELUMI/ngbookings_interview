@@ -7,14 +7,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules"; // Import Autoplay module
 
 const images = [
-    "/images/swiper1.webp",
-    "/images/swiper2.webp",
-    "/images/swiper3.webp",
-    "/images/swiper4.webp",
-    "/images/swiper5.webp",
-    "/images/swiper6.webp",
-    "/images/swiper7.webp",
-    "/images/swiper8.webp"
+    { image: "/images/swiper1.webp" },
+    { image: "/images/swiper2.webp" },
+    { image: "/images/swiper3.webp" },
+    { image: "/images/swiper4.webp" },
+    { image: "/images/swiper5.webp" },
+    { image: "/images/swiper6.webp" },
+    { image: "/images/swiper7.webp" },
+    { image: "/images/swiper8.webp" }
 ]
 
 const ImageSlide = () => {
@@ -36,7 +36,7 @@ const ImageSlide = () => {
                     {images.map((image, index) => (
                         <SwiperSlide key={index} >
                             <img
-                                src={image}
+                                src={image.image}
                                 alt="Icon"
                                 className="object-cover w-full h-full"
                             />
