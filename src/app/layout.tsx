@@ -27,13 +27,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${poppins.variable} antialiased bg-cover bg-center bg-no-repeat bg-fixed`}>
-        <ThemeProvider defaultTheme="light">
-          <QueryProvider>
-            <Toaster visibleToasts={4} position="top-center" />
-            {children}
-            <Footer />
-          </QueryProvider>
-        </ThemeProvider>
+        {/* <ThemeProvider defaultTheme="light"> */}
+        <QueryProvider>
+          <Toaster visibleToasts={4} position="top-center" />
+          {children}
+          <Footer />
+        </QueryProvider>
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );
