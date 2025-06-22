@@ -7,7 +7,7 @@ import React from 'react'
 const Footer = () => {
     return (
         <div style={{
-            backgroundImage: "url('/images/FooterBG.webp')",
+            backgroundImage: "url('/images/FooterBgwebp')",
         }} className=" footer-bg px-10 max-sm:px-5 py-10 max-sm:py-5 bg-cover bg-center bg-no-repeat bg-fixed">
             <div className="flex max-md:flex-col md:justify-between lg:gap-5 pb-5">
                 <div className="flex flex-col gap-6 items-start pb-5 w-fit min-w-48 lg:min-w-56">
